@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link  rel="stylesheet" href="./css/nav_style.css" type="text/css">
+    <link rel="stylesheet" href="./css/page_design.css" type="text/css">
+    <script src="./js/navbar.js"></script>
+    <script src="./js/utils.js"></script>
+    <title>Experiment</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+    
+</head>
+<body>
+ 
+<div id="mySidenav" class="sidenav">
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div><img src="./icons/introduction.png"><a href="#">Introduction</a></div>
+  <div><img src="./icons/theory.png"><a href="#Theory">Theory</a></div>
+  <div><img src="./icons/process.png"><a href="#Procedure">Procedure</a></div>
+  <div><img src="./icons/conclusion.png"><a href="#Conclusion">Conclusion</a></div>
+  <div><img src="./icons/application.png"><a href="#Application">Application</a></div>
+  <div><img src="./icons/simulation.png"><a href="#">Simulator</a></div>
+  <div><img src="./icons/viva.png"><a href="#Viva">Viva</a></div>
+</div>
+
+
+
+
+  <nav class="navbar navbar-light  siteheader ">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class='fas fa-bars' style='font-size:30px; color: white'></i>  &nbsp; &nbsp;Control Systems Lab</span>
+  </nav>
+       
+  
+       
+       
+   
+       
+   <div class="container">  
+    <div class="card contentHolder">
+        <h3>Objective</h3>
+        <p>
+            To study the synchro-transmitter and receiver and obtain output v/s input
+            characteristics.
+        </p>
+    </div>
+
+    <div class="card contentHolder">
+        <h3>Apparatus Required</h3>
+        <p>
+            &emsp;1. Experimental kit with pair of transmitter-receiver synchro motor <br>
+            &emsp;2. CRO
+        </p>
+    </div>
+
+    <div class="card contentHolder">
+        <h3 id="Theory">Theory</h3>
+        <p>
+            <strong>Synchro error detector:</strong> Synchro transmitter and synchro control transmitter arrangement for
+            converting angular position difference into a proportional a.c.<br><br>
+            &emsp;&emsp;The winding on the rotor of a synchro transmitter is connected to an a.c. supply voltage
+            and this rotor is held fixed at a desired angular position any θr The stator winding of synchro
+            transmitter and also that the synchro control transformer is wound at 120&deg; in space on the stator.
+            The two stator winding are connected together.The location of transmitter and control transformer
+            can be away from each other.The rotor of synchro transmitter is salient pole type and that of
+            synchro control transformer is cylindrical type.<br>
+            &emsp;&emsp;The rotor of control transformer is coupled to the output shaft of the control system .If the
+            position of the output shaft is indicated as θ this results in as angular error θe = (θr-θ0) between the
+            position of the input reference and the output shafts.<br>
+            &emsp;&emsp;The process of conversion of the angular difference in to a proportional voltage is
+            explained below,<br>
+            &emsp;&emsp;A single-phase arc voltage<br><br>
+            <p class="formulae1">ei (t) = Em sin (2&Pi;&fnof;t)</p><br><br>
+            Is applied to the rotor winding of the synchro transmitter, then if θr = 0 the corresponding voltage
+            induce by transformer action across the stator winding e1n is given by<br><br>
+            <p class="formulae1">e1n = KEmsin(2&Pi;&fnof;t)</p><br><br>
+            Where K is proportionality constant<br>
+            As the stator winding 2n and 3 n are 240 &deg; and 120 &deg; a part (angle measured as positive in anticlockwise direction) w.r.t. The winding 1n the voltage induce across them are,<br><br>
+            <p class="formulae">
+            e2n = K Em sin (2&Pi;&fnof;t)cos(240&deg;)<br>
+            =-0.5 K Em sin(2&Pi;&fnof;t)<br><br>
+            e3n= K Em sin (2&Pi;&fnof;t)cos(120&deg;)<br>
+            =-0.5 K Em sin (2&Pi;&fnof;t)<br>
+            </p>
+            Now if the rotor of the synchro transmitter shifts in anticlockwise direction through an angle θr
+            the voltage in the stator coil are,<br><br>
+            <p class="formulae1">
+            e1n = K Em sin (2&Pi;&fnof;t)cosθr&deg;<br>
+            e2n = K Em sin (2&Pi;&fnof;t)cos(240&deg;-θr)<br>
+            e3n = K Em sin (2&Pi;&fnof;t)cos(120&deg;-θr)<br>
+            </p>
+            Equation reveal that the magnitudes of the voltage e1n, e2n, and e3nvary sinusoidal w.r.t. θr.<br><br>
+            
+            The three-voltage e1n , e2n, and e3n are connected consecutively to three stator winding of the
+            control transformer and produce a resultant flux in the air gap of the rotor winding of the control
+            transformer. The magnitude of this induce voltage depend on the difference (θr-θ0) If the
+            difference (θr-θ0) is zero, the induce voltage across the rotor winding terminal of the control
+            transformer is zero, maximum for (θr-θ0) =90&deg; and again zero when (θr-θ0)=180&deg;. After 180&deg; the
+            phase of the induce voltage reverses.<br><br>
+            The magnitude being again maximum with a reversed phase and finally zero for (θr-θ0) =360&deg;.
+            The variation of the amplitude of induce voltage across the rotor of control transformer w.r.t. (θr-
+            θ0).<br>
+            Therefore, the magnitude of the output induces voltage e developed across rotor of control
+            transformer is given by the following relation:<br>
+            <p class="formulae1">
+            e =Ks sin(θr-θ0)<br>
+                Where Ks is a constant of proportionality<br></p>
+            It is to be noted that the frequency of the voltage e is the same as that of supply and the magnitude
+            is proportional to the sin(θr-θ0).<br>
+            In control system the angular error i.e.(θr-θ0)is usually small and since (θr-θ0) is expressed in
+            radian, therefore,<br>
+            <p class="formulae1">
+            Sin (θr-θ0) &cong;(θr-θ0)<br>
+            Hence, e=Ks(θr-θ0)<br>
+            And (θr-θ0) is expressed in v/rad.<br><br>
+            </p>
+            The above equation indicates that angular error is converted into a proportional voltage. Laplace
+            transform of the above equation is,<br><br>
+            <p class="formulae">(Es)=Ksθe(s)<br></p>
+            The block diagram representation of synchro error detector is shown in fig.1, Ks are known as the
+            sensitivity or the gain of synchro-error detector.<br>
+            The variation of the magnitude of the output voltage e of synchro-error detector is a function of
+            time.<br>
+            It is to be noted that the phase of e (the output voltage) reverses at the points a and b as the error
+            detectorθe(t) Changes its sign.
+        </p>
+        
+    </div>
+       <div class="card contentHolder">
+        <h3 id="Procedure">Procedure</h3>
+        <p>
+            A). To study of remote position indication system using synchro transmitter/ receiver. Release the
+damping keeping knob to counter-clockwise.<br><br>
+            <p style="padding-left: 20px;">
+            
+1. Connect the circuit as shown in figure-1 keep Tx dial at 0&deg; position. Watch the Rx dial
+position. If there is an error than try it to remove gently positioning the Rx dial.<br>
+2. Increase the Tx dial position to 30&deg; and note the Rx dial position. In actual practice
+increase Tx dial position 35&deg; than bring it back to 30&deg; to minimize the error.<br>
+3. Proceed with same increments and note Rx dial position each time. Tabulate the
+observation. Find out the tracking difference between two-. In practice the error rate
+should be with in &plusmn;	2&deg;.<br>
+4. Change the connection between Rx, rotor as connect Tx, R1 with Rx, R2 and Tx, R2 with
+Rx, R1.<br>
+5. Repeat the step 3 and observe the tracking direction with its displacement.<br>
+6. Bring Tx, Rx, rotor connection as before. Change the connection between Tx, Rx as given
+below<br><h1 class="table1">
+           &emsp;&emsp;Tx&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rx<br>
+&emsp;&emsp;S1 ------------------- S2<br>
+&emsp;&emsp;S2 ------------------- S3<br>
+&emsp;&emsp;S3 ------------------- S1<br>
+&emsp;&emsp;R1 ------------------- R1<br>
+&emsp;&emsp;R2 ------------------- R2<br><br></h1>
+7. Repeat step 3. Tabulate the observation. Conclude the result as given in the text.<br><br></p>
+            &emsp;&emsp;B). To study of synchros transmitter in term of position v/s phase and voltage magnitude
+withrespect to rotor voltage magnitude / phase.<br>
+           
+                       <p style="padding-left: 20px;">
+
+           
+1. Connect the CRO one channel with the provided sockets Com and REF as shown
+in figure-2. The ground of CRO should be connected with COM. The reference
+sockets as attenuated 1: 10, voltage of Tx, R2 with respect to R1.<br>
+2. Connect the CRO other channel, say B channel with output of S1, S2 and S3
+alternately while kept Tx dial to certain position say 0&deg;. Note the output in Vpp and
+its phase angle either same as REF output of phase or each stator winding.<br>
+3. Rotate Tx dial in 30&deg; increment step and note voltage magnitude and phase w.r.t.
+input as REF.<br>
+4. Prepare a table as given in reference from observations. Conclude the results from
+your experiment
+
+        </p>
+    </p>
+    </div>
+ <div class="card contentHolder">
+        <h3>Circuit Diagram</h3>
+        <img src="img/exp1.jpeg" style="width: 100%; height: 80%; padding: 20px;">
+     <p style="text-align: center; font-weight: bold;">Torque Transmitter/ Receiver Demonstrater<br>
+Fig1: Study of Tx to Rx (as error detector) waveforms in term of magnitude v/s phase w.r.to
+input</p><br><br>
+     
+     <img src="img/exp2.jpeg" style="width: 100%; height: 80%; padding: 20px;">
+     <p style="text-align: center; font-weight: bold;">Torque Transmitter/ Receiver Demonstrater<br>
+Fig2: Study of motor waveforms in term of magnitude v/s phase w.r.to input</p><br><br>
+     
+    </div>
+       
+         <div class="card contentHolder">
+        <h3 id="Conclusion">Conclusion</h3>
+        <p>
+             It is observed that synchro-transmitter has produced electrical signals in its stator,
+which are magnitude and phase related with rotor position. There is always one stator winding
+voltage is out of phase with other .The electrical zero appeared at each 60&deg;, with respect to stator
+winding.<br><br>
+            C. To study of synchro transmitter / receiver as an error detector.
+Note: During the experiment receiver shaft should be constant position say 0&deg; in this case.<p style="padding-left: 20px;">
+1. Connect the circuit as shown in fig 2 Note that Rx, R2 socket is left open and
+R1 is connected with R1 of Tx for common mode. Rotate damping knob
+situated nearby Rx dail toward arrow direction.<br>
+2. Connect CRO one channel with REF and COM socket as experiment connect
+other channel socket with R2 of Rx provided at the observation block.<br>
+3. Start from 00 of Tx dial note the voltage magnitude in Vpp and phase in
+respect to REF.<br>
+4. Rotate Tx dial to all around in 60&deg; or 90&deg; note the Rx, R2 output voltage and
+phase.<br>
+5. Plotting th magnitude and phase response of Rx shows the phase / magnitude
+             response. Conclude the result from experiment.</p>
+The system can be track the position of transmitter rotor. The phase and output voltage is e(t) =
+KVrcos&phi;	 sin &omega;c(t), where K is constant,Vr is the reference voltage, &phi;	 is the angle between two
+rotor and &omega; c is the reference signal frequency.
+             </p>
+    </div>
+         <div class="card contentHolder">
+        <h3>Observation Table</h3>
+       
+   <form>          
+             <table class="table table-bordered">
+  <thead>
+     <tr>
+      <th scope="col" style="text-align: center;">Angular position<br>In degree Tx</th>
+      <th scope="col" style="text-align: center;">Angular position<br>In degree Rx</th>
+      <th scope="col"style="text-align: center;">Difference in<br>Degree Tx – Rx</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+     <tr>
+      <th scope="row"><input class="form-control form-control-sm" style="text-align: center" type="number"></th>
+      <td><input class="form-control form-control-sm" style="text-align: center" type="number"></td>
+      <td><input class="form-control form-control-sm"  style="text-align: center" type="number"></td>
+     
+    </tr>
+     <tr>
+      <th scope="row"><input class="form-control form-control-sm" style="text-align: center" type="number"></th>
+      <td><input class="form-control form-control-sm" style="text-align: center" type="number"></td>
+      <td><input class="form-control form-control-sm" style="text-align: center" type="number"></td>
+      
+    </tr>
+    <tr>
+      <th scope="row"><input class="form-control form-control-sm" style="text-align: center" type="number"></th>
+      <td><input class="form-control form-control-sm" style="text-align: center" type="number"></td>
+      <td><input class="form-control form-control-sm" style="text-align: center" type="number"></td>
+      
+    </tr>
+       <tr>
+      <th scope="row"><input class="form-control form-control-sm" style="text-align: center" type="number"></th>
+      <td><input class="form-control form-control-sm" style="text-align: center" type="number"></td>
+      <td><input class="form-control form-control-sm" style="text-align: center" type="number"></td>
+    
+    </tr>
+  </tbody>
+</table>
+             
+   </form>          
+             
+             
+             
+    </div>
+       <div class="card contentHolder">
+        <h3 id="Application">Application</h3>
+        <p>
+            Positioning servomechanisms were used in military fire-control and marine navigation
+equipment.Nowadaysservomechanism is used in automatic machine tools, satellite-tracking
+antennas, remote control airplanes, automatic navigation systems on boats and planes, and
+antiaircraft-gun control systems. Other examples are fly-by-wire systems in aircraft which use
+servos to actuate the aircraft's control surfaces, and radio-controlled models which use RC servos
+for the same purpose. In industrial machines, servos are used to perform complex motion.
+        </p>
+    </div>
+ <div class="card contentHolder">
+        <h3 id="Viva">Viva-Voce </h3>
+        <p>
+            1) How Synchro error detector works?<br>
+2) What is the difference between servo motor and synchros?<br>
+3) What are the main parts of Synchro error detector?<br>
+4) What is the use of synchros?<br>
+
+        </p>
+    </div>
+       
+    </div> 
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='fas fa-angle-up'></i></button>
+    <script >
+
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+</script>
+</body>
+</html>

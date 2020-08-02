@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link  rel="stylesheet" href="./css/nav_style.css" type="text/css">
+    <link rel="stylesheet" href="./css/page_design.css" type="text/css">
+    <script src="./js/navbar.js"></script>
+    <script src="./js/utils.js"></script>
+    <title>Experiment</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div><img src="./icons/introduction.png"><a href="#">Introduction</a></div>
+  <div><img src="./icons/theory.png"><a href="#Theory">Theory</a></div>
+  <div><img src="./icons/process.png"><a href="#Procedure">Procedure</a></div>
+  <div><img src="./icons/conclusion.png"><a href="#Conclusion">Conclusion</a></div>
+  <div><img src="./icons/application.png"><a href="#Application">Application</a></div>
+  <div><img src="./icons/simulation.png"><a href="#">Simulator</a></div>
+  <div><img src="./icons/viva.png"><a href="#Viva">Viva</a></div>
+</div>
+
+
+
+
+  <nav class="navbar navbar-light  siteheader ">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class='fas fa-bars' style='font-size:30px; color: white'></i>  &nbsp; &nbsp;Control Systems Lab</span>
+  </nav>
+      
+<div class="container">
+    <div class="card contentHolder">
+        <h3>Objective</h3>
+        <p>
+           To study characteristics of positional error detector by angular displacement of two servo potentiometers.
+        </p>
+    </div>
+
+    <div class="card contentHolder">
+        <h3>Apparatus Required</h3>
+        <p>
+            1. Experimental kit.<br>
+            2. Dual Trace CRO.
+        </p>
+    </div>
+
+    <div class="card contentHolder">
+        <h3 id="Theory">Theory</h3>
+        <p>
+            The potentiometers are electromechanical devices contains reluctance and a wiper arrangement
+            for variation in resistance due to displacement. Generally, all potentiometers have three terminals.
+            The reference dc or ac is applied to fixed ends and the variable is taken from wiper terminals.
+            When the position of wiper is shifted to other position a prepositional change in voltage occurs as
+            the O/P voltage.
+        </p>    
+                                          <p class="Formulae">e (t)=Keθ (t)<br>
+                                      Where Ke is the proportionality constant</p>
+         <p>
+            Which is equal to reference applied V / Angular span (rad)max and θ(t) is the shaft positions. The
+            potentiometer error detector consists of two identical potentiometers electrically connected in
+            parallel and supplied by a voltage source.
+         </p> 
+         <p>
+            Assume R1 as reference shaft and kept at θ1 and O/P voltage taken as reference V1, than the R2 voltage taken from wiper will be V2 .The O/P compared between two wiper may expressed as: -
+         </p>
+
+       
+                                          <p class="formulae">V1 – V2 = e (t) = Ke θ1 (t) – θ2 (t) = Ke θe(t)</p>
+                                          <p class="formulae">e (t) is known as error voltage.</p>
+
+        <p>
+           For ac excitation signal system is same .The I/P ac signal which is pronounced as carrier may be
+           represented as<br>
+           V(t) = Vsin ωct, Where θe is the angular error between reference and control potentiometer.
+           It may be observed that θe changes its sign when there is 1800 phase shift occurs in e(t) as
+           sinusoidal error.
+        <p> 
+                                         <p class="formulae">θe (t) = sin ωst</p>
+                                         <p class="formulae">There error e(t) may be represented as,</p>  
+                                         <p class="formulae">e(t) = 1/2 KsV [cos(ωc - ωs)t]</p>
+        <p>
+          When this signal is fed through a balanced demodulator it produce a phase sensitive signal, which
+          can be applied to controlled variable (motor).  
+        </p>                                                                  
+    </div>
+
+    <div class="card contentHolder">
+        <h3 id="Procedure">Procedure</h3>
+        <h3>(a) Excite potentiometers with D.C. signal</h3>
+        <p>Sockets at Pot – 1, and Pot – 2, wiper are provided to connect external DVM.</p>
+        <p>1.Switch on the power. Select excitation switch to DC.</p>
+        <p>2.Keep pot – 1, to formulaeter of its travel i.e. 180&#176;=   θ1</p>
+        <p>3.Connect provided DVM with the error output.</p>
+        <p>4. Turn pot – 2, from 20&#176; to 340p in regular steps, say 20&#176; interval and note the displacement in θ2 and output voltage e, as Vo.</p>
+        <p>5. Tabulate the observations. Plot graph between Vo and θ2, for straight-line approximation.</p>
+        <p>Calculate the slope of the line as,</p>
+        
+                                        <p class="formulae">Slope of the line Ko = &Delta;Vo / &Delta;θe ---------- in V/θ&#176;</p>
+        <p>6 Repeat above steps keeping pot–2 at fixed degree and move pot– 1.</p>
+        <h3>(b) To excite the potentiometers with ac signal and to obtain phase sensitive signal from the balanced demodulator by angular displacement of either pot.</h3> 
+        <p>The potentiometers are excited from built in ac sinusoidal source of fixed amplitude (carrier) and error output is then fed into balanced demodulator, which gives phase sensitive dc signal. Other apparatus required is a dual trace CRO.</p>
+        <p>1. Switch on the power. Select ac from the excitation switch.</p>
+        <p>2. Connect one of the CRO input with the carrier output socket and ground socket. Adjust vertical and horizontal deflection of CRO to obtain 2.5 div amplitude with two or more traces (vertical 2V /div and horizontal 0.5 mS/div).</p>
+        <p>3. Connect other input of CRO with the error output socket.</p>                              
+        <p>4. Keep pot – 1, fixed at 180&#176;.</p>
+        <p>5. Move pot – 2, to either side and observe the error output signal phase, and its amplitude.</p>
+        <p>6. Connect error output with the balanced demodulator input. Connect DVM input with the demodulator output.</p>
+        <p>7. Move pot – 2, from 20&#176; to 340&#176; in steps of 20&#176; and note the displacement in θ&#176; and demodulator output in volts Vdm.</p>
+        <p>8. Plot graph from the results.</p>
+        
+    </div>
+
+    <div class="card contentHolder">
+        <h3>CIRCUIT DIAGRAM:-</h3>
+        <p>
+            
+            <img class="formulae" src="img/PIC1.jpg" style="width: 100%;height: 50%;">
+            
+        </p>
+    </div>
+
+    <div class="card contentHolder">
+        <h3>OBSERVATION TABLE</h3>
+        <h3>Table: 1</h3>
+                    <p><form>
+                       <table class="table table-hover table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">Sr. No.</th>
+                  <th scope="col">Pot–2 position in θ&#176; </th>
+                  <th scope="col">θe = θ1 - θ2</th>
+                  <th scope="col">Output volts = Vo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>20</td>
+                  <td>-160</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>40</td>
+                  <td>-140</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">3</th>
+                  <td>60</td>
+                  <td>-120</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">4</th>
+                  <td>80</td>
+                  <td>-100</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">5</th>
+                  <td>100</td>
+                  <td>-80</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">6</th>
+                  <td>120</td>
+                  <td>-60</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">7</th>
+                  <td>140</td>
+                  <td>-40</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">8</th>
+                  <td>160</td>
+                  <td>-20</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">9</th>
+                  <td>180</td>
+                  <td>0</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">10</th>
+                  <td>200</td>
+                  <td>+20</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">11</th>
+                  <td>220</td>
+                  <td>+40</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">12</th>
+                  <td>240</td>
+                  <td>+60</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">13</th>
+                  <td>260</td>
+                  <td>+80</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">14</th>
+                  <td>280</td>
+                  <td>+100</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">15</th>
+                  <td>300</td>
+                  <td>+120</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">16</th>
+                  <td>320</td>
+                  <td>+140</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">17</th>
+                  <td>340</td>
+                  <td>+160</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+              </tbody>
+        </table> </form>
+                    </p>
+
+    <h3>Table: 2</h3>
+                    <p><form>
+                       <table class="table table-hover table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">Sr. No.</th>
+                  <th scope="col">Pot–2 position in θ&#176; </th>
+                  <th scope="col">θe = θ1 - θ2</th>
+                  <th scope="col">Inv, Output volts = Vo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>20</td>
+                  <td>-160</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>40</td>
+                  <td>-140</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">3</th>
+                  <td>60</td>
+                  <td>-120</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">4</th>
+                  <td>80</td>
+                  <td>-100</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">5</th>
+                  <td>100</td>
+                  <td>-80</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">6</th>
+                  <td>120</td>
+                  <td>-60</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">7</th>
+                  <td>140</td>
+                  <td>-40</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">8</th>
+                  <td>160</td>
+                  <td>-20</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">9</th>
+                  <td>180</td>
+                  <td>0</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">10</th>
+                  <td>200</td>
+                  <td>+20</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">11</th>
+                  <td>220</td>
+                  <td>+40</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">12</th>
+                  <td>240</td>
+                  <td>+60</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">13</th>
+                  <td>260</td>
+                  <td>+80</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">14</th>
+                  <td>280</td>
+                  <td>+100</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">15</th>
+                  <td>300</td>
+                  <td>+120</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">16</th>
+                  <td>320</td>
+                  <td>+140</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+                 <tr>
+                  <th scope="row">17</th>
+                  <td>340</td>
+                  <td>+160</td>
+                  <td><input class="form-control form-control-sm bg-dark" style="text-align: center; color:white;" type="number"></td>
+                </tr>
+              </tbody>
+    </table> </form>
+                    </p>                
+                </div>
+
+    <div class="card contentHolder">
+        <h3>RESULTS:-</h3>
+        <p>
+            <h3>PRECAUTIONS: -</h3>
+            <p>1) Read operating manual before working on the kit.</p>
+            <p>2) Don’t change the connection without switching off the supply of the experiment kit.</p>
+            <p>3) Draw the traces from CRO properly.</p>
+            <p>4) Keep the connecting lead and ancillary equipment at proper place after completing the
+            experiment.</p>
+            <p>5) Do not temper with the control and switches of equipment.</p> 
+        </p>
+    </div>
+
+     <div class="card contentHolder">
+        <h3 id="Viva">VIVA VOICE QUESTIONS:-</h3>
+        <p>
+            <p>1) State the principle of potentiometer.</p>
+            <p>2) Define sensitivity of potentiometer.</p>
+            <p>3) Define resolution of potentiometer.</p>
+            <p>4) Describe how potentiometer acts as a transducer.</p>
+            <p>5) What is the difference between displacement measured by potentiometer and LVDT?</p>
+            <p>6) On what factors, does the resolution of potentiometer depend?</p>
+            <p>7) How resolution can be increased in displacement measurement using potentiometer?</p>
+            <p>8) What are the limitations of the potentiometer?</p>
+         </p>
+    </div>
+
+     <div class="card contentHolder">
+        <h3 id="Application">INDUSTRIAL APPLICATIONS:-</h3>
+        <p>
+            Potentiometers are used to control electrical devices such as volume controls on audio
+            equipment. It is also used in a variety of rotary feedback and position indicating circuits.
+            Potentiometers are rarely used to directly control significant power (more than a watt). It
+            operated by a mechanism can be used as position transducers, for example, in a joystick.
+        </p>
+    </div>
+</div>
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='fas fa-angle-up'></i></button>
+    <script >
+
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+</script>
+    
+</body>
+</html>

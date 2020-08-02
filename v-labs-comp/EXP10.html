@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link  rel="stylesheet" href="./css/nav_style.css" type="text/css">
+    <link rel="stylesheet" href="./css/page_design.css" type="text/css">
+    <script src="./js/navbar.js"></script>
+    <script src="./js/utils.js"></script>
+    <title>Experiment</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div><img src="./icons/introduction.png"><a href="#">Introduction</a></div>
+  <div><img src="./icons/theory.png"><a href="#Theory">Theory</a></div>
+  <div><img src="./icons/process.png"><a href="#Procedure">Procedure</a></div>
+  <div><img src="./icons/conclusion.png"><a href="#Conclusion">Conclusion</a></div>
+  <div><img src="./icons/application.png"><a href="#Application">Application</a></div>
+  <div><img src="./icons/simulation.png"><a href="#">Simulator</a></div>
+  <div><img src="./icons/viva.png"><a href="#Viva">Viva</a></div>
+</div>
+
+
+
+
+  <nav class="navbar navbar-light  siteheader ">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class='fas fa-bars' style='font-size:30px; color: white'></i>  &nbsp; &nbsp;Control Systems Lab</span>
+  </nav>
+    <div class="container">  
+    <div class="card contentHolder">
+        <h3>Objective</h3>
+        <p>
+          To determine the response of first order and second order systems for step input for various values of ‘K’ using Linear System Simulator and compare theoretical and practical results.
+
+        </p>
+    </div>
+
+    <div class="card contentHolder">
+        <h3>Apparatus Required</h3>
+        <p>
+            Experimental Kit having following components<br>
+            1. Error detector with gain.<br>
+            2. Integrators.<br>
+            3. Time constant.<br>
+            4. The disturbance.<br>
+            5. Amplifiers<br>
+            6. Signal source (i) square wave. (ii) Triangular wave (iii) Sine wave. (iv)Trigger<br>
+            7 CRO<br>
+        </p>
+    </div>
+
+    <div class="card contentHolder">
+        <h3 id="Theory">Theory</h3>
+        <h3>A) Time response of a first order system</h3>
+        <p>
+            Time response of a first order control system subjected to unit impulse input function.<br>
+            The output for the system is expressed as 
+        </p>    
+                                          <p class="cen">
+                                            <div>
+                                               <img class="cen" src="img/PIC3.png">
+                                            </div>
+                                          </p>
+                                     <p class="">As the input to the system is a unit impulse function, its Laplace transform is 1, i.e. R(s)=1, therefore, substituting in equation </p>
+                                      <p class="cen">
+                                            <div>
+                                               <img class="cen" src="img/PIC4.png">
+                                            </div>
+                                       </p>
+         <p>
+            Taking inverse Laplace transfer on both side of equation
+         </p> 
+         <p>
+            <div>
+              <img class="cen" src="img/PIC2.png">
+            </div>
+         </p> 
+         <p>
+            The time response in relation to equation is shown. Laplace transforms function and corresponding time response of a first order control system subjected to these input function is given.
+        </p>
+        <p>
+            It is observed that step function is the first derivative of the ramp function and impulse function is first derivative of a step function. From the derived time response expression it is concluded that the output time response also follows the sequence as that of input functions. 
+        </p>
+
+       <h3>B) Time response of a second order control system:</h3>
+                                        
+        <p>
+           A second order control system is one where in the highest power of s in the denominator of its transfer function equals 2. A general expression for the transfer function of a control system given by<br>
+                                       <p class="cen">
+                                            <div>
+                                               <img class="cen" src="img/PIC5.png">
+                                            </div>
+                                       </p>
+           
+        <p> 
+        <p class="">The parameter ζ and n will be explained later. The block diagram representation of the transfer function given by      above equation is shown in figure-1
+        </p>
+         
+        <h3>(i) Time response of a second order control system subjected to unit step input function: </h3>                                
+        <p>
+          The output for the system is given by
+        </p> 
+                                             <p class="cen">
+                                               <div>
+                                                <img class="cen" src="img/PIC6.png">
+                                               </div>
+                                             </p>
+    <p>As the input is a unit step function<br>
+     r (t) =1 and R(s) =1/s <br>
+    Therefore substituting in equation</p>      
+                                             <p class="cen">
+                                               <div>
+                                                <img class="cen" src="img/PIC7.png">
+                                               </div>
+                                             </p>
+    <p>Taking inverse Laplace transfer on both sides of equation </p>
+                                             <p class="cen">
+                                               <div>
+                                                <img class="cen" src="img/PIC8.png">
+                                               </div>
+                                             </p>  
+    <p>Therefore</p>                                                                                                                   
+                                            <p class="cen">
+                                               <div>
+                                                <img class="cen" src="img/PIC9.png">
+                                               </div>
+                                             </p> 
+    <p><h3>Time constant:</h3> Next to integrator these blocks simulates type 0, system and its transfer function is in the form of -K1/ (sT+1). The next time constant block is similar to the first except it has oneother input x10, which result in 10 times higher gains necessary to form second order systemorder system simulating .It transfer function is in the form of –K2/(sT+1).</p>                                         
+                                       
+    </div>
+
+    <div class="card contentHolder">
+        <h3 id="Procedure">Procedure</h3>
+        <h3>a) First order close loop system: </h3>
+        <p>Two types of first order system can be configured as shown in fig.1 Make connection as shown and follows.</p>
+        <p>1. Apply 1 Vpp 40 Hz square wave signal to the input and note the response curve on tracing papers setting gains at 1, 2, and 3 and so on</p>
+        <p>2. Calculate the time constant (for type 0 system) in each case and verify the result from theoretical as given before</p>
+        <p>3. Calculate the steady state error from above cases.</p>
+        <p>4. In case of type –1, system particularly it is difficult to find out the steady state error.Switch CRO to XY mode and connect its X input with the triangular wave input, keeping triangular output equal to square.</p>
+        <p>5. Write the result from the experiment and compare it with the theory.<br>
+         There may some imperfection since there is a tolerance between practical and theory.
+        </p>
+       
+       <p><h3>b) The second order system:</h3> Connect the circuit in proper manner and proceed as follows.</p>
+       <p>1. Apply 1 Vpp 40Hz square wave signal to the input and trace the output waveforms for different setting of error gain K upon paper.</p>
+       <p>2. From the trace find out the value of td, tr, tp, Mp, ts and ess. Calculate the theoretical valuesand compare it with practical results.</p>
+       <p>3. In case of type- 1, system use XY mode stated as before for ess evaluations.</p>
+      <p>For type one system starts K from 10.0 and then decrease it for type 0, start from lower sidesetting and then increase.
+      </p>
+
+      <h3>Disturbance rejection:-</h3>
+      <p>Other apparatus required, low freq.</p>
+      <p>1. Connect the circuit as shown in fig.2</p>
+      <p>2. Feed low frequency sine wave signal (20 Hz) of 1Vpp at input of error detector. Observe the effect of disturbance upon the system.</p>
+      <p>3. Disconnect the sine wave signal from the input and connect it with output disturbance adder. Observe the effect. <br>It is observed that when the disturbance signal added at input it becomes added at output the error detector rejects it effectively</p>
+    </div>
+
+    <div class="card contentHolder">
+        <h3>CIRCUIT DIAGRAM:-</h3>
+        <p>
+            <div>
+              <img class="cen" src="img/PIC10.png" >
+            </div>
+            <p class="cen">Figure-1 Connection Diagram for Open Loop Responses</p>
+        </p>
+         <p>
+            <div>
+              <img class="cen" src="img/PIC11.png" >
+            </div>
+            <p class="cen">Figure-2 Connection Diagram for Close Loop Responses</p>
+        </p>
+    </div>
+
+    
+
+    <div class="card contentHolder">
+        <h3>RESULTS:-</h3>
+        <p>
+            <h3>PRECAUTIONS: -</h3>
+            <p>1) Read operating manual before working on the kit.</p>
+            <p>2) Check the connection before switching power supply.</p>
+            <p>3) Don’t change the connection without switching off the supply of the experiment kit.</p>
+            <p>4) Draw the traces from CRO properly.</p>
+            <p>5) Keep the connecting lead and ancillary equipment at proper.</p>
+         </p>
+    </div>
+
+     <div class="card contentHolder">
+        <h3 id="Viva">VIVA VOICE QUESTIONS:-</h3>
+        <p>
+            <p>1) What do you mean by Linear System simulator?</p>
+            <p>2) What is the difference between Open Loop and Closed Loop system?</p>
+            <p>3) Differentiate the type and order of systems.</p>
+            <p>4) Give an example of a close loop system.</p>
+            <p>5) Explain damping ratio and damping frequency.</p>
+         </p>
+    </div>
+
+     <div class="card contentHolder">
+        <h3 id="Application">INDUSTRIAL APPLICATIONS:-</h3>
+        <p>Linear System Simulator is used for time Domain studies of the Open Loop and Closed Loop performance of 1st order and 2nd order systems of Type-0 and Type-I.It is also used for low frequency, square, triangular and sine wave generators
+        </p>
+    </div>
+</div>
+     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='fas fa-angle-up'></i></button>
+    <script >
+
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+</script>
+    
+</body>
+</html>
